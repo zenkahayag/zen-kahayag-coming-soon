@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Kahayag — Coming Soon</title>
+<meta name="description" content="Zen Kahayag - giya para sa ugma. Coming soon.">
+
+<!-- Google Fonts: Cinzel (logo) & Josefin Sans (tagline/body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-dark: #0a0e1f;
+    --navy-mid: #10162e;
+    --gold: #ffeeaa;
+    --gold-soft: #fff6d5;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: radial-gradient(circle at 50% 30%, var(--navy-mid) 0%, var(--navy-dark) 70%);
+    color: var(--gold-soft);
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0 auto 32px;
+    display: block;
+  }
+
+  .coming-soon {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out 0.3s forwards;
+  }
+
+  .message {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: var(--gold-soft);
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out 0.6s forwards;
+    line-height: 1.6;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logo {
+    opacity: 0;
+    animation: fadeIn 1.4s ease-out forwards;
+  }
+
+  footer {
+    margin-top: 48px;
+    font-size: 0.75rem;
+    color: rgba(255, 246, 213, 0.4);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="zen-kahayag-logo.webp" alt="Zen Kahayag - giya para sa ugma" class="logo" width="1200" height="864">
+  <p class="coming-soon">Coming Soon</p>
+  <p class="message">Something meaningful is on its way.</p>
+  <footer>&copy; 2026 Zen Kahayag</footer>
+</div>
+
+</body>
+</html>
