@@ -12,9 +12,8 @@
 
 <style>
   :root {
-    /* ロゴ画像の四隅の実測値に、ページ背景をピッタリ合わせる */
-    --bg-base: #11162d;
     --bg-deep: #0a0e1f;
+    --bg-mid: #10162e;
     --gold: #ffeeaa;
     --gold-soft: #fff6d5;
   }
@@ -30,8 +29,7 @@
   }
 
   body {
-    /* ロゴ画像の背景色を中心色として使い、外側だけ少し暗くする */
-    background: radial-gradient(circle at 50% 38%, var(--bg-base) 0%, var(--bg-deep) 75%);
+    background: radial-gradient(circle at 50% 32%, var(--bg-mid) 0%, var(--bg-deep) 72%);
     color: var(--gold-soft);
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
@@ -48,23 +46,15 @@
     width: 100%;
   }
 
-  .logo-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto 32px;
-    opacity: 0;
-    animation: fadeIn 1.4s ease-out forwards;
-  }
-
   .logo {
     width: 100%;
+    max-width: 480px;
     height: auto;
+    margin: 0 auto 32px;
     display: block;
-    /* 画像の四角い輪郭を、中心から外側に向けて透明にフェードさせる。
-       これで背景との境界線（四角い枠）が視覚的に消える */
-    -webkit-mask-image: radial-gradient(ellipse 62% 78% at 50% 44%, black 55%, transparent 88%);
-    mask-image: radial-gradient(ellipse 62% 78% at 50% 44%, black 55%, transparent 88%);
+    opacity: 0;
+    animation: fadeIn 1.4s ease-out forwards;
+    /* 透過画像なので、背景に自然に馴染む。境界線対策のmaskは不要 */
   }
 
   .coming-soon {
@@ -108,9 +98,7 @@
 <body>
 
 <div class="container">
-  <div class="logo-wrap">
-    <img src="zen-kahayag-logo.webp" alt="Zen Kahayag - giya para sa ugma" class="logo" width="1200" height="864">
-  </div>
+  <img src="zen-kahayag-logo.webp" alt="Zen Kahayag - giya para sa ugma" class="logo">
   <p class="coming-soon">Coming Soon</p>
   <p class="message">Something meaningful is on its way.</p>
   <footer>&copy; 2026 Zen Kahayag</footer>
